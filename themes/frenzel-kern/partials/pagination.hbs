@@ -1,0 +1,6 @@
+{{#if @pagination}}
+<nav class="pagination" aria-label="Seitennavigation">
+    {{#if @pagination.previousPage}}<a class="kern-btn kern-btn--secondary" href="{{@pagination.previousPageUrl}}" rel="prev"><span class="kern-label">Neuere</span></a>{{/if}}
+    {{#if @pagination.nextPage}}<a class="kern-btn kern-btn--secondary" href="{{@pagination.nextPageUrl}}" rel="next"><span class="kern-label">Ältere</span></a>{{/if}}
+</nav>
+{{/if}}

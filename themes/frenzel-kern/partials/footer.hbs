@@ -1,0 +1,18 @@
+    <footer class="site-footer">
+        <div class="kern-container">
+            <ul class="kern-list kern-list--horizontal social">
+                {{#if @config.custom.email}}<li><a class="kern-link" href="mailto:{{@config.custom.email}}">E-Mail</a></li>{{/if}}
+                {{#if @config.custom.linkedinUrl}}<li><a class="kern-link" href="{{@config.custom.linkedinUrl}}" rel="me noopener">LinkedIn</a></li>{{/if}}
+                {{#if @config.custom.mastodonUrl}}<li><a class="kern-link" href="{{@config.custom.mastodonUrl}}" rel="me noopener">Mastodon</a></li>{{/if}}
+                {{#if @config.custom.instagramUrl}}<li><a class="kern-link" href="{{@config.custom.instagramUrl}}" rel="me noopener">Instagram</a></li>{{/if}}
+                {{#if @config.custom.twitterUrl}}<li><a class="kern-link" href="{{@config.custom.twitterUrl}}" rel="me noopener">Twitter</a></li>{{/if}}
+            </ul>
+            {{#if menus.footerMenu}}<nav aria-label="Rechtliches" class="menu">{{> menu menus.footerMenu}}</nav>{{/if}}
+            {{#if @config.custom.imgCredits}}<p class="kern-body kern-body--small">{{@config.custom.imgCredits}}</p>{{/if}}
+            {{#if @config.custom.footerText}}<p class="kern-body kern-body--small">{{@config.custom.footerText}}</p>{{/if}}
+        </div>
+    </footer>
+    {{{@footerCustomCode}}}
+    {{{publiiFooter}}}
+</body>
+</html>

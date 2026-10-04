@@ -1,0 +1,8 @@
+<ul>
+   {{#each items}}
+      <li>
+         {{#if link}}<a class="kern-link" href="{{menuUrl}}"{{#if title}} title="{{title}}"{{/if}}{{#if target}} target="{{target}}"{{/if}}{{#if rel}} rel="{{rel}}"{{/if}}>{{label}}</a>{{else}}<span>{{label}}</span>{{/if}}
+         {{#if items}}{{> menu}}{{/if}}
+      </li>
+   {{/each}}
+</ul>

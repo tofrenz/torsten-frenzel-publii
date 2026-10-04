@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{@website.language}}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{#if title}}<title>{{title}}</title>{{else}}<title>{{@website.name}}</title>{{/if}}
+    {{metaDescription}}
+    {{metaRobots}}
+    {{{publiiHead}}}
+    {{canonicalLink}}
+    {{socialMetaTags}}
+    <link rel="stylesheet" href="{{@website.assetsUrl}}/css/kern.min.css">
+    <link rel="stylesheet" href="{{css "style.css"}}">
+    {{{@headCustomCode}}}
+</head>
+<body class="kern-body">
+    {{{@bodyCustomCode}}}
+    <a class="skip-link kern-link" href="#main">Zum Inhalt springen</a>
+    <div class="kern-kopfzeile-wrap">
+        <div class="kern-container">
+            <header class="site-header">
+                <a class="site-brand" href="{{@website.url}}"><span class="kern-title kern-title--large">{{@website.name}}</span></a>
+                <nav aria-label="Hauptnavigation" class="menu"><ul><li><a class="kern-link" href="{{@website.url}}#podcasts">Podcasts</a></li>{{#each menus.mainMenu.items}}<li><a class="kern-link" href="{{menuUrl}}"{{#if target}} target="{{target}}"{{/if}}>{{label}}</a></li>{{/each}}<li><a class="kern-link" href="{{@website.url}}#kontakt">Kontakt</a></li></ul></nav>
+            </header>
+        </div>
+    </div>
