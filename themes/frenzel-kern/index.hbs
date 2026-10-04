@@ -1,0 +1,46 @@
+{{> head}}
+<main id="main">
+    <section class="kern-container intro" id="das-bin-ich" aria-labelledby="intro-h">
+        <div class="intro__text">
+            {{#if @config.custom.tagline}}<p class="intro__kicker">{{@config.custom.tagline}}</p>{{/if}}
+            <h1 id="intro-h" class="kern-heading-x-large">{{@website.name}}</h1>
+            <div class="kern-body intro__lead">{{{@config.custom.introText}}}</div>
+            {{#if @config.custom.memberships}}<p class="kern-body"><strong>Mitgliedschaften:</strong> {{@config.custom.memberships}}</p>{{/if}}
+        </div>
+        {{#if @config.custom.portraitImg}}<img class="intro__img" src="{{@config.custom.portraitImg}}" alt="{{@config.custom.portraitAlt}}" width="900" height="1350">{{else}}<picture class="intro__pic"><source media="(prefers-color-scheme: dark)" srcset="{{@website.assetsUrl}}/images/portrait-schwarz.jpg"><img class="intro__img intro__img--cutout" src="{{@website.assetsUrl}}/images/portrait-schwarz-freigestellt.webp" alt="{{@config.custom.portraitAlt}}" width="900" height="1350"></picture>{{/if}}
+    </section>
+
+    <section class="band" id="podcasts" aria-labelledby="pod-h">
+        <div class="kern-container">
+            <h2 id="pod-h" class="kern-heading-large">{{@config.custom.podHeading}}</h2>
+            <div class="kern-body">{{{@config.custom.podIntro}}}</div>
+            <ul class="cards">
+                {{#if @config.custom.pod1Title}}<li class="card">{{#if @config.custom.pod1Cover}}<img src="{{@config.custom.pod1Cover}}" alt="Cover: {{@config.custom.pod1Title}}" width="360" height="360" style="aspect-ratio:1/1;object-fit:contain" loading="lazy">{{/if}}<h3 class="kern-heading-small">{{@config.custom.pod1Title}}</h3><p class="kern-body">{{@config.custom.pod1Text}}</p>{{#if @config.custom.pod1Url}}<a class="kern-link" href="{{@config.custom.pod1Url}}" rel="noopener">Zum Podcast</a>{{/if}}</li>{{/if}}
+                {{#if @config.custom.pod2Title}}<li class="card">{{#if @config.custom.pod2Cover}}<img src="{{@config.custom.pod2Cover}}" alt="Cover: {{@config.custom.pod2Title}}" width="360" height="360" style="aspect-ratio:1/1;object-fit:contain" loading="lazy">{{/if}}<h3 class="kern-heading-small">{{@config.custom.pod2Title}}</h3><p class="kern-body">{{@config.custom.pod2Text}}</p>{{#if @config.custom.pod2Url}}<a class="kern-link" href="{{@config.custom.pod2Url}}" rel="noopener">Zum Podcast</a>{{/if}}</li>{{/if}}
+                {{#if @config.custom.pod3Title}}<li class="card">{{#if @config.custom.pod3Cover}}<img src="{{@config.custom.pod3Cover}}" alt="Cover: {{@config.custom.pod3Title}}" width="360" height="360" style="aspect-ratio:1/1;object-fit:contain" loading="lazy">{{/if}}<h3 class="kern-heading-small">{{@config.custom.pod3Title}}</h3><p class="kern-body">{{@config.custom.pod3Text}}</p>{{#if @config.custom.pod3Url}}<a class="kern-link" href="{{@config.custom.pod3Url}}" rel="noopener">Zum Podcast</a>{{/if}}</li>{{/if}}
+            </ul>
+        </div>
+    </section>
+
+    <section class="kern-container" id="oeffentliches" aria-labelledby="pub-h">
+        <h2 id="pub-h" class="kern-heading-large">{{@config.custom.oeffHeading}}</h2>
+        <div class="kern-body">{{{@config.custom.oeffText}}}</div>
+        {{#if menus.oeffMenu}}<nav aria-label="Öffentliches" class="menu">{{> menu menus.oeffMenu}}</nav>{{/if}}
+    </section>
+
+    <section class="band" id="kontakt" aria-labelledby="kon-h">
+        <div class="kern-container">
+            <h2 id="kon-h" class="kern-heading-large">{{@config.custom.kontaktHeading}}</h2>
+            {{#if @config.custom.kontaktText}}<div class="kern-body">{{{@config.custom.kontaktText}}}</div>{{/if}}
+            <ul class="kern-list">
+                {{#if @config.custom.email}}<li><a class="kern-link" href="mailto:{{@config.custom.email}}">{{@config.custom.email}}</a></li>{{/if}}
+                {{#if @config.custom.linkedinUrl}}<li><a class="kern-link" href="{{@config.custom.linkedinUrl}}" rel="me noopener">LinkedIn</a></li>{{/if}}
+                {{#if @config.custom.mastodonUrl}}<li><a class="kern-link" href="{{@config.custom.mastodonUrl}}" rel="me noopener">Mastodon (@tofrenz)</a></li>{{/if}}
+                {{#if @config.custom.mastodonEgovUrl}}<li><a class="kern-link" href="{{@config.custom.mastodonEgovUrl}}" rel="me noopener">Mastodon (@egovpod)</a></li>{{/if}}
+                {{#if @config.custom.instagramUrl}}<li><a class="kern-link" href="{{@config.custom.instagramUrl}}" rel="me noopener">Instagram</a></li>{{/if}}
+                {{#if @config.custom.twitterUrl}}<li><a class="kern-link" href="{{@config.custom.twitterUrl}}" rel="me noopener">Twitter</a></li>{{/if}}
+            </ul>
+        </div>
+    </section>
+</main>
+{{> footer}}

@@ -1,0 +1,489 @@
+{
+  "name": "frenzel-kern",
+  "version": "1.1.0",
+  "author": "Torsten Frenzel <https://torsten-frenzel.de>",
+  "license": "EUPL-1.2",
+  "description": "Persönliche Visitenkarten-Seite auf Basis des KERN-UX Design Systems.",
+  "menus": {
+    "mainMenu": {
+      "desc": "",
+      "name": "Hauptmenü",
+      "maxLevels": 1
+    },
+    "oeffMenu": {
+      "desc": "Ein einzelner Link auf der Startseite im Abschnitt Öffentliches",
+      "name": "Startseite: Link Öffentliches",
+      "maxLevels": 1
+    },
+    "footerMenu": {
+      "desc": "",
+      "name": "Fußmenü (Impressum, Datenschutz)",
+      "maxLevels": 1
+    }
+  },
+  "renderer": {
+    "relatedPostsNumber": 0,
+    "renderRelatedPosts": false,
+    "renderSimilarPosts": false,
+    "renderPrevNextPosts": false,
+    "createContentStructure": true,
+    "createTagPages": true,
+    "createAuthorPages": true,
+    "createTagsList": false,
+    "createSearchPage": false,
+    "create404page": true,
+    "customHTML": {
+      "afterPost": "After every post",
+      "afterPage": "After every page"
+    }
+  },
+  "supportedFeatures": {
+    "blockEditor": true,
+    "tagsList": false,
+    "tagPages": true,
+    "tagImages": false,
+    "authorPages": true,
+    "authorImages": false,
+    "searchPage": false,
+    "errorPage": true,
+    "customSharing": false,
+    "customSearch": false,
+    "customComments": false,
+    "embedConsents": false,
+    "pages": true,
+    "postsPage": false
+  },
+  "pageTemplates": {},
+  "config": [
+    {
+      "name": "postsPerPage",
+      "label": "Posts per page",
+      "value": 5,
+      "type": "number"
+    },
+    {
+      "name": "tagsPostsPerPage",
+      "label": "Tags posts per page",
+      "value": 5,
+      "type": "number"
+    },
+    {
+      "name": "authorsPostsPerPage",
+      "label": "Authors posts per page",
+      "value": 5,
+      "type": "number"
+    },
+    {
+      "name": "excerptLength",
+      "label": "Excerpt length",
+      "value": 45,
+      "type": "number"
+    },
+    {
+      "name": "logo",
+      "label": "Website logo",
+      "value": "",
+      "type": "upload",
+      "upload": true
+    }
+  ],
+  "customConfig": [
+    {
+      "name": "tagline",
+      "label": "Untertitel über dem Namen",
+      "value": "eGovernment · Open Government · Smart City",
+      "type": "text",
+      "group": "Startseite: Einleitung"
+    },
+    {
+      "name": "introText",
+      "label": "Einleitungstext",
+      "value": "<p>Seit vielen Jahren beschäftige ich mich beruflich wie privat mit eGovernment, Open Government und Smart City. Seit 2014 produziere ich den eGovernment Podcast. Beruflich habe ich Erfahrung in Kundensupport, öffentlicher Verwaltung, Produktmanagement und Führung. In meiner Freizeit schieße ich traditionell mit dem Bogen.</p>",
+      "type": "wysiwyg",
+      "group": "Startseite: Einleitung"
+    },
+    {
+      "name": "memberships",
+      "label": "Mitgliedschaften (leer = ausblenden)",
+      "value": "D64, NEGZ, N3GZ, Co:Lab, Chaos Computer Club Community, OSBA (Vorstand)",
+      "type": "text",
+      "group": "Startseite: Einleitung"
+    },
+    {
+      "name": "portraitImg",
+      "label": "Portraitfoto (leer = mitgeliefertes Foto)",
+      "value": "",
+      "type": "upload",
+      "group": "Startseite: Einleitung",
+      "upload": true
+    },
+    {
+      "name": "portraitAlt",
+      "label": "Portraitfoto: Alternativtext",
+      "value": "Portrait von Torsten Frenzel",
+      "type": "text",
+      "group": "Startseite: Einleitung"
+    },
+    {
+      "name": "podHeading",
+      "label": "Überschrift",
+      "value": "Podcasts",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "podIntro",
+      "label": "Einleitung",
+      "value": "<p>Alle Podcasts erscheinen nicht kommerziell unter dem Label <a href=\"https://podcastfunkhaus.de\">Podcastfunkhaus</a> und stehen unter der Lizenz Creative Commons Attribution-ShareAlike 4.0.</p>",
+      "type": "wysiwyg",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod1Title",
+      "label": "Podcast 1: Titel",
+      "value": "eGovernment Podcast",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod1Text",
+      "label": "Podcast 1: Beschreibung",
+      "value": "Seit 2014: Wie kommt die Digitalisierung der öffentlichen Verwaltung voran?",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod1Url",
+      "label": "Podcast 1: Link (leer = kein Link)",
+      "value": "https://egovernment-podcast.com",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod1Cover",
+      "label": "Podcast 1: Cover-URL (quadratisch)",
+      "value": "https://podcastfunkhaus.de/assets/img/egovernment-podcast.jpg",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod2Title",
+      "label": "Podcast 2: Titel",
+      "value": "Bogensport Podcast",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod2Text",
+      "label": "Podcast 2: Beschreibung",
+      "value": "Rund ums traditionelle Bogenschießen (derzeit pausiert).",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod2Url",
+      "label": "Podcast 2: Link (leer = kein Link)",
+      "value": "",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod2Cover",
+      "label": "Podcast 2: Cover-URL (quadratisch)",
+      "value": "https://podcastfunkhaus.de/assets/img/bogensport-podcast.jpg",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod3Title",
+      "label": "Podcast 3: Titel",
+      "value": "Die Küchenagenten",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod3Text",
+      "label": "Podcast 3: Beschreibung",
+      "value": "Der Kochpodcast für und mit Kindern (derzeit pausiert).",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod3Url",
+      "label": "Podcast 3: Link (leer = kein Link)",
+      "value": "",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "pod3Cover",
+      "label": "Podcast 3: Cover-URL (quadratisch)",
+      "value": "https://podcastfunkhaus.de/assets/img/kuechenagenten.jpg",
+      "type": "text",
+      "group": "Startseite: Podcasts"
+    },
+    {
+      "name": "oeffHeading",
+      "label": "Überschrift",
+      "value": "Öffentliches",
+      "type": "text",
+      "group": "Startseite: Öffentliches"
+    },
+    {
+      "name": "oeffText",
+      "label": "Text",
+      "value": "<p>Vorträge, Anhörungen und Medienbeiträge (2019–2023) finden sich auf der Seite „Öffentliches“.</p>",
+      "type": "wysiwyg",
+      "group": "Startseite: Öffentliches"
+    },
+    {
+      "name": "kontaktHeading",
+      "label": "Überschrift",
+      "value": "Kontakt",
+      "type": "text",
+      "group": "Startseite: Kontakt"
+    },
+    {
+      "name": "kontaktText",
+      "label": "Text über den Links (leer = ausblenden)",
+      "value": "",
+      "type": "wysiwyg",
+      "group": "Startseite: Kontakt"
+    },
+    {
+      "name": "email",
+      "label": "E-Mail",
+      "value": "anfrage@focn.de",
+      "type": "text",
+      "group": "Links & Kontakt"
+    },
+    {
+      "name": "linkedinUrl",
+      "label": "LinkedIn",
+      "value": "https://www.linkedin.com/in/tfrenzel/",
+      "type": "text",
+      "group": "Links & Kontakt"
+    },
+    {
+      "name": "mastodonUrl",
+      "label": "Mastodon (@tofrenz)",
+      "value": "https://chaos.social/@tofrenz",
+      "type": "text",
+      "group": "Links & Kontakt"
+    },
+    {
+      "name": "mastodonEgovUrl",
+      "label": "Mastodon (@egovpod)",
+      "value": "https://podcasts.social/@egovpod",
+      "type": "text",
+      "group": "Links & Kontakt"
+    },
+    {
+      "name": "instagramUrl",
+      "label": "Instagram",
+      "value": "https://www.instagram.com/tofrenz/",
+      "type": "text",
+      "group": "Links & Kontakt"
+    },
+    {
+      "name": "twitterUrl",
+      "label": "Twitter",
+      "value": "https://twitter.com/tofrenz",
+      "type": "text",
+      "group": "Links & Kontakt"
+    },
+    {
+      "name": "imgCredits",
+      "label": "Bildnachweis (optional)",
+      "value": "",
+      "type": "text",
+      "group": "Fußzeile"
+    },
+    {
+      "name": "footerText",
+      "label": "Fußzeilentext",
+      "value": "Inhalte, soweit nicht anders angegeben, unter CC BY-SA 4.0. Theme unter EUPL-1.2 · Design: KERN-UX",
+      "type": "text",
+      "group": "Fußzeile"
+    }
+  ],
+  "postConfig": [],
+  "pageConfig": [],
+  "authorConfig": [],
+  "tagConfig": [],
+  "files": {
+    "ignoreAssets": [
+      "scss",
+      ".DS_Store"
+    ],
+    "assetsPath": "assets",
+    "useDynamicAssets": false,
+    "partialsPath": "partials",
+    "responsiveImages": {
+      "contentImages": {
+        "sizes": "(max-width: 1920px) 100vw, 1920px",
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto"
+          }
+        }
+      },
+      "featuredImages": {
+        "sizes": {
+          "hero": "88vw",
+          "feed": "(min-width: 600px) calc(4.38vw + 143px), 87.86vw"
+        },
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto",
+            "group": "hero,feed"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto",
+            "group": "hero,feed"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto",
+            "group": "hero,feed"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto",
+            "group": "hero"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto",
+            "group": "hero"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto",
+            "group": "hero"
+          }
+        }
+      },
+      "tagImages": {
+        "sizes": "88vw",
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto"
+          }
+        }
+      },
+      "authorImages": {
+        "sizes": "88vw",
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto"
+          }
+        }
+      },
+      "optionImages": {
+        "sizes": "88vw",
+        "dimensions": {
+          "xs": {
+            "width": 640,
+            "height": "auto"
+          },
+          "sm": {
+            "width": 768,
+            "height": "auto"
+          },
+          "md": {
+            "width": 1024,
+            "height": "auto"
+          },
+          "lg": {
+            "width": 1366,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1600,
+            "height": "auto"
+          },
+          "2xl": {
+            "width": 1920,
+            "height": "auto"
+          }
+        }
+      },
+      "galleryImages": {
+        "sizes": "",
+        "dimensions": {
+          "thumbnail": {
+            "width": 720,
+            "height": "auto"
+          }
+        }
+      }
+    }
+  },
+  "customElements": []
+}
