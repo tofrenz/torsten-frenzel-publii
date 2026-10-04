@@ -1,0 +1,45 @@
+/* Frenzel KERN – EUPL-1.2. Fira Sans: SIL OFL 1.1 (via KERN-UX). main.css und style.css sind identisch (Publii liest beide). */
+@font-face{font-family:"Fira Sans";src:url("../fonts/FiraSans-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Fira Sans";src:url("../fonts/FiraSans-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Fira Sans";src:url("../fonts/FiraSans-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1}
+.main{padding-block:2.5rem}
+.kern-container{max-width:60rem;margin-inline:auto;padding-inline:1rem;box-sizing:border-box}
+.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:1rem;top:1rem;background:#fff;padding:.5rem;z-index:10}
+.kern-kopfzeile-wrap{border-bottom:1px solid currentColor}
+.site-header{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;padding-block:1rem}
+.site-brand{text-decoration:none;color:inherit}
+.site-header ul,.site-footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:1rem}
+.site-header a,.site-footer a{color:inherit}
+.intro{padding-block:4rem}
+.intro__kicker{margin:0 0 .5rem;text-transform:uppercase;letter-spacing:.1em;font-size:.875rem;font-weight:700}
+.intro__lead{font-size:1.25rem;max-width:42rem}
+.band{padding-block:3rem;background:var(--kern-color-layout-background-hued,#f3f5f7)}
+.cards{list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{background:#fff;color:#111;border:1px solid #111;padding:1.25rem}
+.card .kern-heading-small,.card .kern-body{color:#111}
+.card .kern-link{color:#0b3f8c}
+.content img{max-width:100%;height:auto}
+.content table{border-collapse:collapse;width:100%}
+.content th,.content td{text-align:left;padding:.5rem;border-bottom:1px solid #ccc;vertical-align:top}
+.site-footer{padding-block:1.5rem;background:#111;color:#fff}
+.site-footer .kern-container{display:flex;flex-direction:column;gap:1rem}
+.pagination{display:flex;gap:1rem;margin-top:2rem}
+.post-teaser{margin-block:1.5rem}
+.intro{display:grid;gap:2rem;grid-template-columns:2fr 1fr;align-items:center}
+.intro__img{width:100%;height:auto;max-height:36rem;object-fit:cover;border-radius:.5rem}
+.wide-img{width:100%;max-width:32rem;height:auto;max-height:24rem;object-fit:cover;border-radius:.5rem;margin-block:1.5rem}
+@media(max-width:40rem){.intro{grid-template-columns:1fr}.intro__img{order:-1;max-height:22rem}}
+.cards .card img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#fff;margin:0 0 .75rem}
+.intro__lead a,.band .kern-body a,#oeffentliches .kern-body a{color:inherit;text-decoration:underline}
+.kern-body p:first-child{margin-top:0}
+
+/* Footer: Links immer hell auf dunklem Grund (KERN-Linkfarbe überschreiben) */
+.site-footer a,.site-footer a.kern-link,.site-footer a.kern-link:visited{color:#fff;text-decoration:underline}
+.site-footer a:hover,.site-footer a.kern-link:hover{color:#fff;text-decoration-thickness:2px}
+.site-footer .kern-body{color:#fff}
+/* Freigestelltes Portrait im hellen Modus; im dunklen Modus Originalfoto */
+.intro__pic{display:block;align-self:end}
+.intro__img--cutout{border-radius:0;object-fit:contain;object-position:bottom}
+@media(prefers-color-scheme:dark){.intro__img--cutout{border-radius:.5rem;object-fit:cover}}
